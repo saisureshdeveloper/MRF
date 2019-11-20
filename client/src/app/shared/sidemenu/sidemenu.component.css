@@ -1,0 +1,132 @@
+.mini {
+  margin-left: 70px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #ccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+  border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
+}
+
+
+#remove-scroll {overflow-y:hidden; height: -webkit-fill-available; margin-bottom: 25px; }
+#remove-scroll:hover {overflow-y:scroll;height: -webkit-fill-available; margin-bottom: 25px;}
+
+#remove-scroll::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 2px;
+	background-color: #495057;
+}
+
+#remove-scroll::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #495057;
+}
+
+#remove-scroll::-webkit-scrollbar-thumb
+{
+	/* border-radius: 10px; */
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  /* background-color: #D62929; */
+  
+  background: rgb(158, 165, 171);
+  width: 5px;
+  position: absolute;
+  top: 110px;
+  opacity: 0.4;
+  display: block;
+  border-radius: 7px;
+  z-index: 99;
+  right: 1px;
+  height: 296.565px;
+}
+
+.submenuheight{
+    height: 0px;
+    visibility: hidden;
+}
+
+.submenu li {
+  padding-left:15px;
+  }
+  ul li + .submenu {
+  display: none;
+  }
+  ul li.active + .submenu {
+    display: block;
+    list-style: none;
+    }
+
+    mat-expansion-panel {
+      background: #333547;
+    color: #8397ad;
+    margin-bottom: 10px;
+    box-shadow: none!important;
+    }
+    .mat-expansion-indicator {
+      color: #8397ad!important; 
+    }
+    mat-expansion-panel-body {
+      /* padding: 0 24px 16px; */
+      padding: 0px;
+  }
+
+  .highlight{
+    background: #5f627d;
+  }
+  ::ng-deep .mat-expansion-panel-body
+  {
+      padding: 0px !important;
+  }
+  ::ng-deep .specific-class > .mat-expansion-indicator:after {
+      color: #8397ad;
+      }
+
+      .header{
+        position: relative;
+    font-size: large;
+    color: black;
+      }

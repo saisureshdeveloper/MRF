@@ -1,0 +1,131 @@
+<div class="container-fluid" style="margin: inherit;">
+        <div class="page-title-box">
+            <div class="row align-items-center">
+                <div class="col-12 card TopHeader">
+                    <div class="card-body">
+                            <form name="form"  #f="ngForm" novalidate>
+
+                        <div class="row">
+                                <div class="col-4 form-group  ">
+                                       
+                                        <div class="row">
+                                                <label class=" col-sm-3 col-form-label">Relationship</label>
+                                            <select name="BankName" [(ngModel)]="BankName" (change)="onChange($event.target.value)" class="col-sm-8 form-control">
+                                                <!-- <option value=''>ALL</option> -->
+                                                <option *ngFor="let val of listbank;" value="{{val.relationshipId}}">{{val.relationshipName}}</option>
+                                            </select>
+                                            <!-- <div *ngIf="BankName !=" class="invalid-feedback">
+                                                    <div *ngIf="BankName.errors.required">First Name is required</div>
+                                                </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-4 form-group  ">
+                                       
+                                            <div class="row">
+                                                    <label class=" col-sm-2 col-form-label"> Select type</label>
+                                                <select name="cattype"  [(ngModel)]="cattype" (change)="onChange($event.target.value)" class="col-sm-8 form-control">
+                                                    <option value='source2.inputFolder'>BANK</option>
+                                                    <option value='source1.inputFolder'>CONTRACT</option>
+
+                                                   <!-- <option *ngFor="let val of listOrders;" value="{{val.lookupValue}}">{{val.lookupValue}}</option> -->
+                                                </select>
+                                            </div>
+                                    </div>
+                                    <div class="col-4 form-group">
+                                        <!-- <div class="upload-btn-wrapper">
+                                                <h4 class="mt-0 header-title">Browse File</h4>
+                                                <input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+
+                                        </div> -->
+                                        <input type="file" #excel  name="excel" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" ng2FileSelect [uploader]="uploader" />
+
+                                            <!-- button to trigger the file upload when submitted -->
+                                            <button type="button" class="btn btn-success btn-s"
+                                                (click)="uploader.uploadAll()" 
+                                                [disabled]="((!uploader.getNotUploadedItems().length) && (BankName !== '' || BankName) && (cattype !== '' || cattype))">
+                                                Upload 
+                                            </button>
+                                            <button class="btn btn-success btn-s" (click)='reload()' type="button"style="float: right;"> Reset  </button>
+
+                                    </div>
+                                  
+                                   
+                        </div>
+                    </form>
+                            
+                    </div>
+
+                </div>
+            
+               
+            </div>
+        </div>
+</div>
+
+<div class="row" style="display: none;">
+
+    <div class="col-12">
+            <h1>
+                   
+                      {{title}}
+                    </h1>
+                    
+                    <!-- File input for the file-upload plugin, with special ng2-file-upload directive called ng2FileSelect -->
+                    <input type="file" name="photo" ng2FileSelect [uploader]="uploader" />
+                    <!-- button to trigger the file upload when submitted -->
+                    <button type="button" class="btn btn-success btn-s"
+                        (click)="uploader.uploadAll()" 
+                        [disabled]="!uploader.getNotUploadedItems().length">
+                        Upload with ng-2 file uploader
+                    </button>
+                    
+                    <!-- File input for upload without using the plugin. -->
+                    <input id="photo" type="file" />
+                    <!-- button to trigger the file upload when submitted -->
+                    <button type="button" class="btn btn-success btn-s" (click)="upload()">
+                    Upload with method 2
+                    </button>
+
+    </div>
+  <div class="col-12">
+      <div class="card">
+          <div class="card-body">
+
+              <h4 class="mt-0 header-title">Dropzone</h4>
+
+              <!-- File input for the file-upload plugin, with special ng2-file-upload directive called ng2FileSelect -->
+<input type="file" name="excel" ng2FileSelect [uploader]="uploader" />
+<!-- button to trigger the file upload when submitted -->
+<button type="button" class="btn btn-success btn-s"
+      (click)="uploader.uploadAll()" 
+      [disabled]="!uploader.getNotUploadedItems().length">
+      Upload with ng-2 file uploader
+</button>
+              <p class="text-muted m-b-30">DropzoneJS is an open source library
+                  that provides drag’n’drop file uploads with image previews.
+              </p>
+
+              <div class="m-b-30">
+                  <form action="#" class="dropzone">
+                      <div class="fallback">
+                          <input name="file" type="file" multiple="multiple">
+                      </div>
+                  </form>
+              </div>
+
+              <div class="text-center m-t-15">
+                  <button type="button" class="btn btn-primary waves-effect waves-light">Send Files</button>
+              </div>
+          </div>
+      </div>
+  </div> 
+</div>
+<div class="row" >
+  <div class="col-12">
+      <div class="card">
+          <div class="card-body">
+            <app-summarytable></app-summarytable>
+          </div>
+      </div>
+  </div> 
+</div>

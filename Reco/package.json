@@ -1,0 +1,34 @@
+{
+  "name": "Reco",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "3.1.0",
+    "body-parser": "1.19.0",
+    "cfonts": "2.4.3",
+    "common_lib": "file:../common_lib",
+    "compression": "1.7.4",
+    "cookie-parser": "1.4.4",
+    "cors": "2.8.5",
+    "debug": "4.1.1",
+    "express": "4.17.0",
+    "figlet": "1.2.1",
+    "jsonwebtoken": "8.5.1",
+    "log4js": "4.2.0",
+    "moment": "2.24.0",
+    "moment-range": "4.0.2",
+    "morgan": "1.9.1",
+    "multer": "1.4.2",
+    "mysql": "2.17.1",
+    "mysql2": "1.6.5",
+    "sequelize": "5.9.2",
+    "sequelize-cli": "5.5.0",
+    "serve-favicon": "2.5.0"
+  }
+}

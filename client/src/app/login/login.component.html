@@ -1,0 +1,181 @@
+<div class="pb-0">
+
+  <div class="wrapper-page">
+
+      <div class="card overflow-hidden account-card mx-3">
+          
+          <div class="bg-primary p-4 text-white text-center position-relative">
+              <h4 class="font-20 m-b-5">MRF</h4>
+              <!-- <p class="text-white-50 mb-4">Sign in to continue to Advent Business solutions.</p> -->
+              <!-- <a href="index.html" class="logo logo-admin"><img src="assets/images/logo-sm.png" height="24" alt="logo"></a> -->
+          </div>
+          <div class="account-card-content"> 
+
+              <form class="form-horizontal m-t-30" autocomplete="off"  name="Loginform" (ngSubmit)="f.form.valid && onSubmit(f)" #f="ngForm" novalidate>
+
+                  <div class="form-group">
+                      <label for="username">Username</label>
+                      <input type="text" class="form-control"  id="username" name="username" [(ngModel)]="model.username" #username="ngModel"  placeholder="Enter username" required/>
+                      <div *ngIf="username.invalid && (username.dirty || username.touched)" >
+                        <ul class="parsley-errors-list filled" id="parsley-id-9">
+                          <li class="parsley-required" >
+                            User Name is required.
+                          </li>
+                          <li class="parsley-required" *ngIf="username.errors.minlength">
+                            Name must be at least 4 characters long.
+                          </li>
+                          <li class="parsley-required" *ngIf="username.errors.forbiddenName">
+                            Name cannot be Bob.
+                          </li>
+                        </ul>
+
+                      </div>
+                      
+                      <div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
+                        <div *ngIf="username.errors.required">First Name is required</div>
+                        <ul class="parsley-errors-list filled" id="parsley-id-9"><li class="parsley-required">This value is required.</li></ul>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                      <label for="userpassword">Password</label>
+                      <input type="password" class="form-control"  id="userpassword" name="userpassword" [(ngModel)]="model.password" #userpassword="ngModel" placeholder="Enter password" required/>
+                      <div *ngIf="userpassword.invalid && (userpassword.dirty || userpassword.touched)" >
+                        <ul class="parsley-errors-list filled" id="parsley-id-9">
+                          <li class="parsley-required" >
+                            Password is required.
+                          </li>
+                          <li class="parsley-required" *ngIf="userpassword.errors.minlength">
+                            Name must be at least 4 characters long.
+                          </li>
+                          <li class="parsley-required" *ngIf="userpassword.errors.forbiddenName">
+                            Name cannot be Bob.
+                          </li>
+                        </ul>
+
+                      </div>
+                      
+                      
+                      <div *ngIf="f.submitted && userpassword.invalid" class="invalid-feedback">
+                        <div *ngIf="userpassword.errors.required">userpassword is required</div>
+                    </div>
+                  </div>
+                  <div class="form-group" *ngIf="false">
+                    <label for="site">Site</label>
+                    <!-- <input type="text" class="form-control"  id="defaultsiteId" name="defaultsiteId" [(ngModel)]="model.siteId" #defaultsiteId="ngModel" value="{{listsiteDetails[0].siteId}}" disabled required/> -->
+
+                    <select class="form-control"  id="defaultsiteId" name="defaultsiteId" [(ngModel)]="model.siteId" #defaultsiteId="ngModel" value="1" disabled required>
+                      <!-- <option *ngFor="let val of listsiteDetails;" selected="true"  value="{{val.siteId}}">{{val.siteName}}</option> -->
+                      <option  selected="true"  value="1">TVS</option>
+
+                  </select>
+                  </div>
+                
+                  <div class="form-group row m-t-20">
+                      <div class="col-sm-6">
+                          <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="customControlInline">
+                              <label class="custom-control-label" for="customControlInline">Remember me</label>
+                          </div>
+                      </div>
+                      <div class="col-sm-6 text-right">
+                          
+                        <button mat-raised-button  color="primary" type="submit"
+                        [disabled]=" (username.invalid) || (userpassword.invalid)"
+                        >Login</button>
+                        <!-- <button  mat-raised-buttonclass="btn btn-primary w-md waves-effect waves-light" [disabled]="(userpassword.invalid && (userpassword.dirty || userpassword.touched))&&(username.invalid && (username.dirty || username.touched))" type="submit">Log In</button> -->
+                      </div>
+                  </div>
+
+                  <div class="form-group m-t-10 mb-0 row">
+                      <div class="col-12 m-t-20">
+                          <a href="pages-recoverpw.html"><i class="mdi mdi-lock"></i> Forgot your password?</a>
+                      </div>
+                  </div>
+              </form>
+
+          </div>
+      </div>
+
+      <div class="m-t-40 text-center">
+          <!-- <p>Don't have an account ? <a href="pages-register.html" class="font-500 text-primary"> Signup now </a> </p> -->
+          <p>© 2019 Advent Business solutions.</p>
+      </div>
+
+  </div>
+ 
+
+</div>
+
+
+<!-- <form class="form-horizontal m-t-30" autocomplete="off"  name="Loginform" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" validate>
+
+  <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control"  id="username" name="username" [(ngModel)]="model.username" #username="ngModel" [ngModelOptions]="{standalone: true}" placeholder="Enter username" required />
+      <div *ngIf="username.invalid && (username.dirty || username.touched)" >
+        <ul class="parsley-errors-list filled" id="parsley-id-9">
+          <li class="parsley-required" >
+            User Name is required.
+          </li>
+          <li class="parsley-required" *ngIf="username.errors.minlength">
+            Name must be at least 4 characters long.
+          </li>
+          <li class="parsley-required" *ngIf="username.errors.forbiddenName">
+            Name cannot be Bob.
+          </li>
+        </ul>
+
+      </div>
+      
+      <div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
+        <div *ngIf="username.errors.required">First Name is required</div>
+        <ul class="parsley-errors-list filled" id="parsley-id-9"><li class="parsley-required">This value is required.</li></ul>
+    </div>
+  </div>
+
+  <div class="form-group">
+      <label for="userpassword">Password</label>
+      <input type="password" class="form-control"  id="userpassword" name="userpassword" [(ngModel)]="model.password" #userpassword="ngModel" [ngModelOptions]="{standalone: true}" placeholder="Enter password" required />
+      <div *ngIf="userpassword.invalid && (userpassword.dirty || userpassword.touched)" >
+        <ul class="parsley-errors-list filled" id="parsley-id-9">
+          <li class="parsley-required" >
+            Password is required.
+          </li>
+          <li class="parsley-required" *ngIf="userpassword.errors.minlength">
+            Name must be at least 4 characters long.
+          </li>
+          <li class="parsley-required" *ngIf="userpassword.errors.forbiddenName">
+            Name cannot be Bob.
+          </li>
+        </ul>
+
+      </div>
+      
+      
+      <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+        <div *ngIf="firstName.errors.required">First Name is required</div>
+    </div>
+  </div>
+
+  <div class="form-group row m-t-20">
+      <div class="col-sm-6">
+          <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customControlInline">
+              <label class="custom-control-label" for="customControlInline">Remember me</label>
+          </div>
+      </div>
+      <div class="col-sm-6 text-right">
+          
+        <button mat-raised-button  color="primary" type="submit">Login</button>
+        [disabled]="(userpassword.invalid && (userpassword.dirty || userpassword.touched))&&(username.invalid && (username.dirty || username.touched))"
+        <button  mat-raised-buttonclass="btn btn-primary w-md waves-effect waves-light" [disabled]="(userpassword.invalid && (userpassword.dirty || userpassword.touched))&&(username.invalid && (username.dirty || username.touched))" type="submit">Log In</button>
+      </div>
+  </div>
+
+  <div class="form-group m-t-10 mb-0 row">
+      <div class="col-12 m-t-20">
+          <a href="pages-recoverpw.html"><i class="mdi mdi-lock"></i> Forgot your password?</a>
+      </div>
+  </div>
+</form> -->

@@ -1,0 +1,36 @@
+<!-- <h1 mat-dialog-title>Hi {{data.name}}</h1>
+<div mat-dialog-content>
+  <p>What's your favorite animal?</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+</div> -->
+<!-- <div class="modal bs-example-modal " tabindex="-1" role="dialog">
+   -->
+   <div>
+      <!-- <div class="modal-dialog " role="document"> -->
+        <div>
+         <div class="modal-content popwidth">
+             <div class="modal-header">
+                 <h5 class="modal-title mt-0">{{  data.title }}</h5>
+                 <button (click)="onNoClick()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">×</span>
+                 </button>
+             </div>
+             <div class="modal-body">
+                 <p>{{ data.description}}</p>
+             </div>
+             <div class="modal-footer">
+                 <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                 <button mat-button [mat-dialog-close]="true" cdkFocusInitial>yes</button>
+                 <button mat-button mat-dialog-close>No</button>
+
+                 <!-- <button (click)="onNoClick()"  type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+             </div>
+         </div><!-- /.modal-content -->
+     </div><!-- /.modal-dialog -->
+   </div>

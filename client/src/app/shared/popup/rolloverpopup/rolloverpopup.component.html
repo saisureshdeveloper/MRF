@@ -1,0 +1,24 @@
+<div class="container">
+  <span *ngIf="flag" style="color: red;">{{message}}</span>
+    <form style="    margin: 2px 170px 20px 100px;">
+        <div class="form-group row">
+          <label for="example-text-input" class="col-sm-4 col-form-label">Target Contract Number</label>
+          <div class="col-sm-8">
+            <input class="form-control"  name="Targetcontractnumber" [(ngModel)]="model.Targetcontractnumber" #Targetcontractnumber="ngModel"  placeholder="Enter Target contract number"  id="Targetcontractnumber" type="text" required/>
+          </div>
+        </div>
+      
+        <div class="form-group mb-0">
+          <div>
+            <button type="button"  [disabled]=" (Targetcontractnumber.invalid)" (click)="save(model.Targetcontractnumber)" class="btn btn-primary waves-effect waves-light mr-1">
+              Save
+            </button>
+            <button type="button" (click)="onNoClick()"  class="btn btn-primary waves-effect waves-light mr-1">
+               Cancel
+              </button>
+
+          </div>
+        </div>
+      </form>
+
+</div>

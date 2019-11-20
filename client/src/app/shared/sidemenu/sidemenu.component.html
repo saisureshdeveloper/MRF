@@ -1,0 +1,280 @@
+<main [ngClass]="{'enlarged':flag}">
+
+
+<div id="wrapper">
+
+  <!-- Top Bar Start -->
+  <div class="topbar">
+
+      <!-- LOGO -->
+      <div class="topbar-left">
+          <a class="logo">
+              <span>
+                      <!-- <img src="assets/images/dashboard.png" alt="" height="18"> -->
+                      <a class="navbar-brand" style="color:darkgray" >Advent Suits</a>
+                  </span>
+              <i>
+                      <!-- <img src="assets/images/login.png" alt="" height="22"> -->
+                      <a class="navbar-brand" style="color:darkgray">A</a>
+
+                  </i>
+          </a>
+      </div>
+
+      <nav class="navbar-custom">
+            
+
+          <ul class="list-inline menu-left mb-0 header">
+              <!-- <li class="float-left">
+                  <button class="button-menu-mobile open-left waves-effect" (click)="toggle()">
+                      <i class="mdi mdi-menu"></i>
+                  </button>
+                  <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                  
+                        Dashboard
+                </a>
+             
+
+              </li> -->
+              <li class="dropdown notification-list list-inline-item" style="float: left;">
+                    <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown"  role="button" aria-haspopup="false" aria-expanded="false">
+                       
+                       <strong>{{titleName}}</strong> 
+                    </a>
+                   
+                </li>
+              <li class="dropdown notification-list list-inline-item" style="float:right">
+                <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                    <i class="mdi mdi-power text-danger"></i>
+                   Logout
+                </a>
+               
+            </li>
+              <!-- <li class="d-none d-sm-block">
+                  <div class="dropdown pt-3 d-inline-block">
+                      <a class="btn btn-light dropdown-toggle" [routerLink]="" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Create
+                          </a>
+
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item" [routerLink]="">Action</a>
+                          <a class="dropdown-item" [routerLink]="">Another action</a>
+                          <a class="dropdown-item" [routerLink]="">Something else here</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" [routerLink]="">Separated link</a>
+                      </div>
+                  </div>
+              </li> -->
+          </ul>
+         
+      </nav>
+
+  </div>
+  <!-- Top Bar End -->
+
+  <!-- ========== Left Sidebar Start ========== -->
+  <div class="left side-menu">
+      <div class="slimscroll-menu" id="remove-scroll" >
+
+
+          <!--- Sidemenu -->
+          <div id="sidebar-menu">
+              <!-- Left Menu Start -->
+              <mat-accordion>
+                <mat-expansion-panel  *ngFor="let menu of navitemsParent;let i=index;"> 
+                  <mat-expansion-panel-header class="specific-class" [ngClass]="{'highlight': (CHECKPAGE == menu.featureCode)}" >
+                    <a (click)="fetchURL(menu.parentFeatureID,menu.url,menu)" class="waves-effect">
+                        <!-- <mat-icon>home</mat-icon>  -->
+                        <i class="ti-home"></i>
+                        <span> {{menu.featureName}} </span>
+                    </a>
+                  </mat-expansion-panel-header>
+              
+                  <ul *ngFor="let submenu of navitemschildren;">
+                    <li *ngIf="menu.orgFeatureId == submenu.parentFeatureID ">
+                      
+                        <a  [routerLink]="[submenu.url?submenu.url:false]">{{submenu.featureName}}</a>
+                    </li>
+
+                </ul>
+                </mat-expansion-panel>
+                </mat-accordion>
+                          
+                            <ul class="metismenu" *ngIf="false"  id="side-menu" >
+                                
+                                <li class="menu-title">{{ listModules.moduleName  }}</li>
+                                <li *ngFor="let menu of listModules.Features;let i=index;"  [ngClass]="{'mm-active': active}" >
+                                        <a (click)="fetchURL(menu.parentFeatureID,menu.url)" class="waves-effect" *ngIf="!menu.parentFeatureID">
+                                            <i class="ti-home"></i> <span> {{menu.featureName}} </span>
+                                        </a>
+                                        <!--navflag appExpandMenu class="submenu mm-collapse mm-show " [ngClass]="{'submenu mm-collapse mm-show ': menu.featureCode == CHECKPAGE,'submenu mm-collapse':menu.featureCode != CHECKPAGE}" -->
+<!--                                       
+                                        <ul  [ngClass]="{'submenu mm-collapse mm-show ': !navflag,'submenu mm-collapse':navflag}" (click)="listClick($event)" *ngIf="(menu.parentFeatureID != NULL)">
+                                            <li>
+                                              
+                                                <a  [routerLink]="[menu.url?menu.url:false]">{{menu.featureName}}</a>
+                                            </li>
+                    
+                                        </ul> -->
+                                       
+                                        
+                                    </li>
+                           </ul>
+                           
+                           
+                           <div *ngIf="false">
+                            <ul class="metismenu"  *ngFor="let val of listModules" id="side-menu" >
+                                <li class="menu-title">{{ val.moduleName  }}</li>
+                                <li *ngFor="let menu of val.Features;let i=index;"  [ngClass]="{'mm-active': false}" >
+                                        <a [routerLink]="[menu.url?menu.url:false]" class="waves-effect" *ngIf="!menu.parentFeatureID">
+                                            <i class="ti-home"></i> <span> {{menu.featureName}} </span>
+                                        </a>
+
+                                        <ul class="submenu mm-collapse mm-show" *ngIf="(menu.parentFeatureID != NULL)">
+                                            <li >
+                                                <!-- {{k}} -->
+                                                <a [routerLink]="[menu.url?menu.url:false]">{{menu.featureName}}</a>
+                                            </li>
+                    
+                                        </ul>
+                                    </li>
+                           </ul>
+                           </div>
+              <!-- <ul class="metismenu" id="side-menu" >
+                    <li class="menu-title">{{ this.menuList.Modules.moduleName}}</li>
+                    
+                    <li class="mm-active">
+                            <a [routerLink]="index.html" class="waves-effect mm-active">
+                                <i class="ti-home"></i><span class="badge badge-primary badge-pill float-right">2</span> <span> Dashboard </span>
+                            </a>
+                        </li>
+                        <li>
+                                <a [routerLink]="calendar.html" class="waves-effect"><i class="fas fa-file-alt"></i><span> Reports </span></a>
+                            </li>
+
+                            <li>
+                                    <a [routerLink]="calendar.html" class="waves-effect"><i class="ti-upload"></i><span> Upload Data </span></a>
+                                </li>
+                               
+                                <li>
+                                        <a [routerLink]="calendar.html" class="waves-effect"><i class="ti-briefcase"></i><span> Master </span></a>
+                                        <ul class="submenu mm-collapse mm-show" >
+                                                <li><a [routerLink]="">Organization</a></li>
+                                                <li><a [routerLink]="">Counter Parties</a></li>
+                                                <li><a [routerLink]="">Bank</a></li>
+                                                <li><a [routerLink]="">Bank Accounts</a></li>
+                                                <li><a [routerLink]="">Internal Accounts</a></li>
+                                          
+                                            </ul>
+                                    </li>
+                        
+
+                  <li  (click)="hidesubmenu()">
+                      <a [routerLink]="" class="waves-effect"><i class="ti-email"></i><span> {{ this.menuList.Modules.moduleName}} <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                     
+
+                      <ul   [ngClass]="!flag ? 'submenu':'submenu mm-collapse mm-show'" *ngIf="submenu">
+                          <li *ngFor="let submenu of this.menuList.Modules.features"><a [routerLink]="">{{submenu.featureName }}</a></li>
+                          <li ><a [routerLink]="">Dashboard</a></li>
+                          
+                          <li ><a [routerLink]="">Master</a>
+                            <ul class="submenu mm-collapse mm-show" style=" margin: 14px">
+                                <li><a [routerLink]="">Organization</a></li>
+                                <li><a [routerLink]="">Counter Parties</a></li>
+                                <li><a [routerLink]="">Bank</a></li>
+                                <li><a [routerLink]="">Bank Accounts</a></li>
+                                <li><a [routerLink]="">Internal Accounts</a></li>
+                          
+                            </ul>
+                            
+                        </li>
+                          <li ><a [routerLink]="">Security</a></li>
+                          <ul class="submenu mm-collapse mm-show" style=" margin: 14px">
+                                <li><a [routerLink]="">Roles</a></li>
+                                <li><a [routerLink]="">Users</a></li>
+                                <li><a [routerLink]="">Permission</a></li>
+                          
+                            </ul>
+
+                      </ul>
+                  </li>
+                  <li>
+                  <a [routerLink]="" class="waves-effect"><i class="ti-email"></i><span>  User perferance <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                  <ul>
+                   
+                      <ul class="submenu mm-collapse mm-show" style=" margin: 14px">
+                          <li><a [routerLink]="">Organization</a></li>
+                          <li><a [routerLink]="">Counter Parties</a></li>
+                          <li><a [routerLink]="">Bank</a></li>
+                          <li><a [routerLink]="">Bank Accounts</a></li>
+                          <li><a [routerLink]="">Internal Accounts</a></li>
+                    
+                      </ul>
+                      
+                  
+                    <li ><a [routerLink]="">Security</a></li>
+                    <ul class="submenu mm-collapse mm-show" style=" margin: 14px">
+                          <li><a [routerLink]="">Roles</a></li>
+                          <li><a [routerLink]="">Users</a></li>
+                          <li><a [routerLink]="">Permission</a></li>
+                    
+                      </ul>
+
+                </ul>
+                  
+                 </li>
+                 <li>
+                    <a [routerLink]="/logout" class="waves-effect"><i class="ti-email"></i><span>  Logout <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
+                    
+                   </li>
+
+
+              
+
+              </ul> -->
+           
+
+          </div>
+          <!-- Sidebar -->
+          <div class="clearfix"></div>
+
+      </div>
+      <!-- Sidebar -left -->
+
+  </div>
+  <!-- Left Sidebar End -->
+
+</div>
+  <!-- ============================================================== -->
+  <!-- Start right Content here -->
+  <!-- ============================================================== -->
+  <div [ngClass]="flag ? 'content-page mini':'content-page'">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container-fluid">
+                    <router-outlet></router-outlet>
+                            
+        </div>
+        <!-- container-fluid -->
+
+
+    </div>
+    <!-- content -->
+
+    <footer class="footer">
+            © 2019 Advent Business solutions.
+    </footer>
+
+</div>
+
+<!-- ============================================================== -->
+<!-- End Right content here -->
+<!-- ============================================================== -->
+
+<script src="../../../assets/js/app.js"></script>
+
+</main>
+
+<style>
+
+</style>

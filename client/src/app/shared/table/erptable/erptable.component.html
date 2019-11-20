@@ -1,0 +1,78 @@
+<!-- <mat-card> -->
+  <!-- <div>
+    <h2>ERP</h2>
+    <div class="form-group row">
+
+      <label for="example-text-input" class="col-sm-2 col-form-label">Filter</label>
+      <div class="col-sm-4">
+        <input class="form-control" type="text" id="filter-input">
+        <mat-form-field>
+            <mat-label>Find</mat-label>
+          <input matInput [(ngModel)]="findtext"  placeholder="Enter word">
+        </mat-form-field>
+
+      </div>
+      <div class="col-sm-4" >
+          <mat-form-field>
+              <mat-label>Select Column</mat-label>
+              <mat-select [(ngModel)]="columnname" >
+                <mat-option *ngFor="let val of columnDefs;" [value]="val.field">
+                  {{val.headerName}}
+                </mat-option>
+              </mat-select>
+              </mat-form-field> -->
+            
+                          
+        <!-- <select class="form-control"
+         style="width: 100%;" tabindex="-1"
+        aria-hidden="true">
+      
+        <option *ngFor="let val of columnDefs;" value="{{val.field}}">{{val.headerName}}</option>
+         
+        </select> -->
+      
+      <!-- </div>
+      <div class="col-sm-4">
+          <button mat-raised-button color="primary" (click)="search()">Search</button>
+          <span style="font-size: 33px;
+          margin-left: 16px;
+          position: absolute;
+          cursor: pointer;" (click)="refresh()">
+              <i class="mdi mdi-refresh"></i>
+    
+              </span>
+      </div>
+    
+
+    </div> -->
+    <ag-grid-angular id="style-2" style=" height: 420px;" class="ag-theme-balham" [enableFilter]="true"
+      [rowData]="rowData" [enableSorting]="true" [pagination]="false"  
+      (rowSelected)='rowSelected($event)'
+     
+      [columnDefs]="columnDefs"
+      [rowSelection]="rowSelection"
+      [groupSelectsChildren]="true"
+      [suppressRowClickSelection]="true"
+      [pagination]="true"
+      [paginationAutoPageSize]="true"
+      [frameworkComponents]="frameworkComponents"
+      >
+    </ag-grid-angular>
+
+    <!-- pager -->
+    <mat-paginator [length]="totalpage" [pageSize]="limit" [pageSizeOptions]="[5, 10, 25, 100]"
+      (page)="pagechange($event)">
+    </mat-paginator>
+  
+  <!-- </div> -->
+<!-- </mat-card> -->
+
+<style>
+  ::ng-deep .ag-theme-balham .ag-header-cell, .ag-theme-balham .ag-header-group-cell{
+      background-color: #0077b3!important;
+          color:#fff;
+        
+          font-weight: bold;
+  }
+ 
+  </style>

@@ -1,0 +1,37 @@
+.popwidth{
+    width: 900px!important;
+}
+
+mat-expansion-panel{
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+button{
+    margin-bottom: 2%!important;
+    margin-top: 1%!important;
+
+}
+mat-panel-title{
+    font-size: large;
+    font-weight: 500;
+}
+
+legend {
+    border-style: none;
+    border-width: 0;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 0;
+    width: auto;
+    padding: 0 10px;
+    border: 1px solid #e0e0e0;
+}
+fieldset {
+    border: 1px solid #131212;
+    padding: 10px;
+}
+
+h5{
+    font-size: medium;
+}
+   

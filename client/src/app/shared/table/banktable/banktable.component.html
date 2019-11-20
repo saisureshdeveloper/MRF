@@ -1,0 +1,29 @@
+<ag-grid-angular #bankagGrid style=" height: 420px;" class="ag-theme-balham" [enableFilter]="true"
+
+[rowData]="rowData" [enableSorting]="true" [pagination]="false" (rowClicked)='onRowClicked($event)' 
+(rowSelected)='rowSelected($event)'
+[rowSelection]="rowSelection"
+[columnDefs]="columnDefs"
+
+(gridReady)="onGridReady($event)"
+>
+
+</ag-grid-angular>
+
+<!-- pager -->
+<mat-paginator [length]="totalpage" [pageSize]="limit" [pageSizeOptions]="[5, 10, 25, 100]"
+(page)="pagechange($event)">
+</mat-paginator>
+
+<!-- </div> -->
+<!-- </mat-card> -->
+
+<style>
+::ng-deep .ag-theme-balham .ag-header-cell, .ag-theme-balham .ag-header-group-cell{
+background-color: #0077b3!important;
+    color:#fff;
+  
+    font-weight: bold;
+}
+
+</style>

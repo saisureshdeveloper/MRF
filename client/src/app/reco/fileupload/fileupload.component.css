@@ -1,0 +1,25 @@
+/* Dropzone */
+.dropzone {
+    min-height: 230px;
+    border: 2px dashed rgba(0, 0, 0, 0.3);
+    background: #ffffff;
+    border-radius: 6px;
+  }
+  
+  .dropzone .dz-message {
+    font-size: 30px;
+  }
+  .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }

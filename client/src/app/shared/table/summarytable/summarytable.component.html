@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+        <button class="btn btn-success btn-s" (click)='reload()' type="button"style="font-size: x-large;float: right;"> <i class="mdi mdi-refresh"></i>  </button>
+
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-12">
+          <ag-grid-angular style=" height: 600px;" class="ag-theme-balham" [enableFilter]="true"
+
+          [rowData]="rowData" [enableSorting]="true" [pagination]="false" (rowClicked)='onRowClicked($event)' 
+          (rowSelected)='rowSelected($event)'
+          
+          [columnDefs]="columnDefs"
+          (gridReady)="onGridReady($event)"
+          >
+          
+          </ag-grid-angular>
+        </div>
+     
+    </div>
+  
+  
+
+</div>
+
+<!-- pager -->
+<!-- <mat-paginator [length]="totalpage" [pageSize]="limit" [pageSizeOptions]="[5, 10, 25, 100]"
+(page)="pagechange($event)">
+</mat-paginator> -->
+
+<!-- </div> -->
+<!-- </mat-card> -->
+
+<style>
+::ng-deep .ag-theme-balham .ag-header-cell, .ag-theme-balham .ag-header-group-cell{
+background-color: #0077b3!important;
+    color:#fff;
+  
+    font-weight: bold;
+}
+
+</style>

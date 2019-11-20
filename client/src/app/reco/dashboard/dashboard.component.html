@@ -1,0 +1,361 @@
+<div class="container-fluid" style="margin: inherit;">
+        <div class="page-title-box">
+            <div class="row align-items-center">
+                <div class="col-12 card TopHeader">
+                    <div class="card-body">
+                        <div class="row">
+                            
+                                <div class="col-6 form-group  ">
+                                       
+                                        <div class="row">
+                                                <label class=" col-sm-3 col-form-label">Relationship</label>
+                                            <select  [(ngModel)]="BankName" (change)="onChange($event.target.value)" class="col-sm-8 form-control">
+                                                <option value=''>ALL</option>
+                                                <option *ngFor="let val of listbank;" value="{{val.relationshipId}}">{{val.relationshipName}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 form-group  ">
+                                       
+                                            <div class="row">
+                                                    <label class=" col-sm-4 col-form-label">Type of Order</label>
+                                                <select  [(ngModel)]="TypeOforder" (change)="onChange($event.target.value)" class="col-sm-8 form-control">
+                                                    <option value=''>ALL</option>
+                                                   <option *ngFor="let val of listOrders;" value="{{val.lookupValue}}">{{val.lookupValue}}</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                   
+                        </div>
+                            
+                    </div>
+
+                </div>
+            
+               
+            </div>
+        </div>
+        <section>
+            <div class="card secondPanel">
+                <div class="card-body">
+                        <div class="row">
+                                <div class="col-1 previous-btn" >
+                                    <button  (click)="previous()"> <i class="typcn typcn-chevron-left "></i></button>
+                        
+                            </div>
+                            <div class="col-10" >
+                                    <owl-carousel #owlElement class="carousel slide" [options]="carouselOptions" [items]="loadwigetsdata" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                                            <mat-card *ngFor="let item of loadwigetsdata;let i= index">
+                                                    <!-- <app-barchart></app-barchart> -->
+                                                    <app-barchart (click)="selectedWidgets(item)" [data]="item.widgetActionDetails" [BankName]="BankName" [options]="item.widgetDisplayDetails" [type]="item.widgetType"></app-barchart>
+
+                                            </mat-card>
+                                           
+                
+                                    </owl-carousel>
+                            
+                                          
+                                </div>
+                                <div class="col-1 next-btn">
+                                        <button (click)="next()"> <i class="typcn typcn-chevron-right"></i></button>
+                        
+                        
+                                    </div>
+                            </div>
+                </div>
+
+            </div>
+            
+        </section>
+        <section *ngIf="fasle">
+                <div class="row"  style="height: 300px">
+                        <div class="col-lg-7">
+                            <div class="card">
+                                <div class="card-body" style="    height: 26em;">
+                                    <div class="" style="" >
+                                        <div style="display: block">
+                                          <canvas baseChart 
+                                          width="700" height="300"
+                                          [datasets]="[{
+                                            data:[1064682,
+                                            3985265,
+                                            7240968,
+                                            124293816
+                                            
+                                            ],
+                                            label:'Total',
+                                             backgroundColor: [
+                                           '#F44336','#E91E63','#9C27B0','#3F51B5'
+                                          ]
+                                        
+                                          }]"
+                                          [labels]="['Matched',' Open','Pending','All']"
+                                          [chartType]="'doughnut'"
+                                          [options]="widgets2"
+                                               >
+                                          </canvas>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <section>
+                          <div class="row">
+                            <div class="col">
+                                <div class="card" style="height: 7em" >
+                                       
+                                    <div class="card-body">
+                
+                                          <div class="mb-4">
+                                                  <div class="float-right mini-stat-img mr-4">
+                                                          <i class="fas fa-cash-register widget-icon"></i>
+                                                  </div>
+                                                  <h5 class="font-16 text-uppercase mt-0 widget-label">Today Contracts</h5>
+                                                  <div class="row">
+                                                          <div class="col-md-4">
+                                                                  <span class="cust-name">Count</span><br>
+                                                                  <span class="widget-span"> 580 </span>
+                          
+                                                          </div>
+                                                          <div class="col-md-8">
+                                                                  <span class="cust-name">Value</span><br>
+                                                                  <span class="widget-span"> ₹ 86.580 crs</span>
+                          
+                                                          </div>
+                                                        </div>
+                                              </div>
+                                       
+                                       
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                
+                          </div>
+                          <div class="row">
+                              <div class="col">
+                                  <div class="card" style="height: 7em">
+                                       
+                                      <div class="card-body">
+                  
+                                            <div class="mb-4">
+                                                    <div class="float-right mini-stat-img mr-4">
+                                                            <i class="mdi mdi-account-group widget-icon"></i>
+                                                    </div>
+                                                    <h5 class="font-16 text-uppercase mt-0 widget-label">Contracts maturing in next one Weeks</h5>
+                                                    <div class="row">
+                                                            <div class="col-md-4">
+                                                                    <span class="cust-name">Count</span><br>
+                                                                    <span class="widget-span"> 580 </span>
+                            
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                    <span class="cust-name">Value</span><br>
+                                                                    <span class="widget-span"> ₹ 86.580 crs</span>
+                            
+                                                            </div>
+                                                          </div>
+                                                </div>
+                                         
+                                         
+                                          
+                                      </div>
+                                  </div>
+                              </div>
+                  
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="card" style="height: 7em">
+                                       
+                                        <div class="card-body">
+                    
+                                              <div class="mb-4">
+                                                      <div class="float-right mini-stat-img mr-4">
+                                                              <i class="fas fa-money-bill widget-icon"></i>
+                                                      </div>
+                                                      <h5 class="font-16 text-uppercase mt-0 widget-label">This Month Summary Contracts</h5>
+                                                      <div class="row">
+                                                              <div class="col-md-4">
+                                                                      <span class="cust-name">Count</span><br>
+                                                                      <span class="widget-span"> 580 </span>
+                              
+                                                              </div>
+                                                              <div class="col-md-8">
+                                                                      <span class="cust-name">Value</span><br>
+                                                                      <span class="widget-span"> ₹ 86.580 crs</span>
+                              
+                                                              </div>
+                                                            </div>
+                                                  </div>
+                                           
+                                           
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                              </div>
+                            </section>
+                        </div>
+                    </div>
+        </section>
+        <section *ngIf="isEditable">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+
+                      <div class="col-xl">
+
+                        <h4 class="mt-0 header-title mb-4">Contracts</h4>
+                        <div class="table-responsive">
+                          <!-- <app-erptable   [rowData]="SelectedOrderData"></app-erptable> -->
+                          <div>Total Amount : {{ERPVAlue}}</div>
+                          <div>
+                            <ag-grid-angular id="Selectedorder" style=" height: 210px;" class="ag-theme-balham"
+                              [enableFilter]="true" [rowData]="SelectedOrderData" [enableSorting]="true"
+                              [pagination]="false" [columnDefs]="OrdercolumnDefs" [rowSelection]="rowSelection"
+                              [suppressRowClickSelection]="true" (gridReady)="onGridReadyOrder($event)">
+                            </ag-grid-angular>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col-xl" *ngIf="(listtable.length == 2)">
+
+                        <h4 class="mt-0 header-title mb-4">Bank</h4>
+                        <div class="table-responsive">
+                            <div>
+                                Amount:{{getTotalAmountOfBank}}
+                            </div>
+                          <div>
+                            <ag-grid-angular #agGrid id="SelectedBank" style=" height: 210px;" class="ag-theme-balham"
+                              [enableFilter]="true" [rowData]="SelectedBankData" [enableSorting]="true"
+                              [pagination]="false" (rowClicked)='onRowClicked($event)'
+                              (rowSelected)='rowSelected($event)' [columnDefs]="BankcolumnDefs"
+                              [rowSelection]="rowSelection" [groupSelectsChildren]="true"
+                              [suppressRowClickSelection]="true" (gridReady)="onGridReadyBank($event)">
+                            </ag-grid-angular>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="float-right button-items">
+                            <!-- <a class="btn btn-primary waves-effect waves-light" href="#" role="button">Link</a> -->
+                            <button *ngIf="isMatch ==='true'" [disabled]="((getTotalAmount !=0)&&(getTotalAmountOfBank !=0)&&(ERPVAlue >= getTotalAmountOfBank))?false:true" class="btn btn-primary btn-md widget-btn" (click)="match(SelectedBankData,SelectedOrderData,BankName)" type="button">Match</button>
+                            <button *ngIf="isRollover ==='true'" (click)="rollover()" class="btn btn-primary btn-md widget-btn" type="button">Roll Over</button>
+                            <button *ngIf="isCancel ==='true'" (click)="CancelRecord()" class="btn btn-primary btn-md widget-btn" type="button">Cancel</button>
+                            <button *ngIf="isClosed ==='true'"  (click)="CloseRecord()" class="btn btn-primary btn-md widget-btn" type="button">Closed</button>
+                            <button *ngIf="isUnMatch ==='true'" class="btn btn-primary btn-md widget-btn" type="button">Unmatch</button>
+                            <button  class="btn btn-primary btn-md widget-btn" (click)="reset()" type="button">Reset</button>
+
+                            
+                        </div>
+                  </div>
+                </div>
+        </section>
+    
+
+            <section style=" ">
+                <div class="row" >
+                    <div class="col-xl" *ngFor="let table of listtable">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="mt-0 header-title mb-4">{{table.Table_name}}</h4>
+                                <div class="table-responsive" *ngIf="!(table.Table_name === 'BANK')">
+                                    <app-erptable id="style-2" (selectedRows)="Ordergettingrows($event,table.Table_name)"  [tablename]="table.Table_name" [relationshipID]="BankName" [classification1]="TypeOforder" [deselectAllrowData]="erpDeselectAll" [query]="table"></app-erptable>
+                                </div>
+                                <div class="table-responsive" *ngIf="(table.Table_name === 'BANK')">
+                                    <app-banktable (notifyParent)="getNotification($event)" (RemoveSelectedRecord)="bankremoveSelectedRec()" (selectedRows)="Bankgettingrows($event)" [selectedBankrow]="selectedBankrow" [deselectAllrowData]="bankDeSelectAll" [relationshipID]="BankName"  [query]="table.Table_query"></app-banktable>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="mt-0 header-title mb-4">Bank</h4>
+                                <div class="table-responsive">
+                                    <app-banktable (selectedRows)="Bankgettingrows($event)" [rowData]="BankrowData"></app-banktable>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+                </div>
+          </section>
+      
+
+ <!--
+
+               <div class="container-fluid" style="margin: inherit;display: none">
+                
+                    <div  class="row" style="margin-bottom: 22px;">
+                <label  class="col-form-label" style="
+                    font-weight: 500;
+                    font-size: medium;
+                ">Relationships</label>
+                      <div  class="col-sm-3">
+                          
+                        <select  class="form-control"
+                        [(ngModel)]="BankName" (change)="onChange($event.target.value)" style="width: 100%;" tabindex="-1"
+                        aria-hidden="true">
+                        <option value="">ALL</option>
+                        <option *ngFor="let val of listbank;" value="{{val.relationshipId}}">{{val.relationshipName}}</option>
+                         
+                        </select></div>
+                    </div>
+                    <div class="row">
+                            <div class="col-1 previous-btn" >
+                                    <button  (click)="previous()"> <i class="typcn typcn-chevron-left "></i></button>
+                        
+                            </div>
+                            <div class="col-10" >
+                                    <owl-carousel   #owlElement class="carousel slide" [options]="carouselOptions" [items]="loadwigetsdata" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                                            <div class="item" *ngFor="let image of images;let i= index"> 
+                                                <mat-card  *ngFor="let item of loadwigetsdata;let i= index" (click)="showtable()">
+                                                    <div>
+                                                            <app-barchart [data]="item.widgetActionDetails" [options]="item.widgetDisplayDetails" [type]="item.widgetType"></app-barchart>
+                                                            <div class="slide-text">
+                                                              <h4>{{item.widgetName}}</h4>
+                                                            </div>
+                                                    </div>
+                                                </mat-card>
+                                              
+                                             </div>
+                                          </owl-carousel>
+                            
+                                          
+                                </div>
+                                <div class="col-1 next-btn">
+                                        <button (click)="next()"> <i class="typcn typcn-chevron-right"></i></button>
+                        
+                        
+                                    </div>
+                        </div>
+               </div>     
+
+               
+              
+              <div class="container-fluid" style="margin: inherit;">
+              
+              
+                <span  *ngIf="flag" class="float-right menu-arrow" (click)="hidetable()"><i class="mdi mdi-close"></i></span> 
+
+                <div class="row" *ngIf="flag">
+                  
+                    <div class="col col-lg-6">
+                        
+                        <app-erptable [relationId]="BankName"></app-erptable>
+                    </div>
+                    <div class="col col-lg-6">
+                        <app-banktable></app-banktable>
+                    </div>
+                  
+
+              </div>
+              </div>
+           
+            -->

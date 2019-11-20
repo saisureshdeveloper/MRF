@@ -1,0 +1,192 @@
+<div class="popwidth">
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>Edit Opeartion</h3>
+        </div>
+        <div class="col-sm-6">
+                <button (click)="onNoClick()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                      </button>
+            </div>
+    </div>
+  <div style="float: right;margin-top: -24px;">
+ 
+  </div>
+  
+  <fieldset>
+        <legend>Details:</legend>
+        <div class="row">
+            <div class="col-xl-6">
+                   <h5> Entity: {{this.rowData[0].classification_1}}</h5>
+            </div>
+            <div class="col-xl-6">
+                    <h5>  OrderType: {{this.rowData[0].classification_2}}</h5>
+                </div>
+            
+        </div>
+        <div class="row">
+                <div class="col-xl-6">
+                        <h5>  OrderNumber: {{this.rowData[0].referenceText_1}}</h5>
+                </div>
+                <div class="col-xl-6">
+                        <h5>  Currency : {{this.rowData[0].referenceText_5}}</h5>
+                    </div>
+                
+            </div>
+      
+      
+      
+       </fieldset>
+  <!-- <ag-grid-angular style="height: 100px;
+    padding-bottom: 18px;" class="ag-theme-balham" [rowData]="rowData" [columnDefs]="columnDefs"
+    (gridReady)="onGridReady($event)">
+  </ag-grid-angular> -->
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Add Allocations
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+      <div style="    margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 10px;
+     ">
+
+        <form  #allocationForm="ngForm" style="margin: 2px 170px 20px 100px;">
+          <div class="form-group row">
+            <label for="example-text-input" class="col-sm-4 col-form-label">Allocated Amount</label>
+            <div class="col-sm-8">
+                    <input type="number" min="0" step=".01" class="form-control"  id="Allocatedamount" name="Allocatedamount" [(ngModel)]="model.Allocatedamount" #Allocatedamount="ngModel"  placeholder="Enter Allocatedamount" required/>
+                    
+                <!-- <input type="text" class="form-control"  id="allocated_amount" name="allocated_amount" [(ngModel)]="model.allocated_amount" #allocated_amount="ngModel"  placeholder="Enter allocated_amount" required/> -->
+                    <div *ngIf="Allocatedamount?.invalid && (Allocatedamount?.dirty || Allocatedamount?.touched)" class="alert alert-danger">
+                            allocated_amount is required
+                    </div>
+            </div>
+           
+          </div>
+          <div class="form-group row">
+                <label for="example-text-input" class="col-sm-4 col-form-label">Allocated Date</label>
+                <div class="col-sm-8">
+                    
+                                <div class="input-group">
+                                    <input type="date" class="form-control" placeholder="mm/dd/yyyy" id="AllocatedDate" name="AllocatedDate" [(ngModel)]="model.AllocatedDate" #AllocatedDate="ngModel"  placeholder="Enter Allocated Date" required/>
+                                    <!-- <input class="form-control" type="date" value="2011-08-19" id="example-date-input"> -->
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
+                                    </div>
+                                    <div *ngIf="AllocatedDate?.invalid && (AllocatedDate?.dirty || AllocatedDate?.touched)" class="alert alert-danger">
+                                            Allocated Date is required
+                                    </div>
+                                </div><!-- input-group -->
+                            
+                </div>
+              </div>
+              <div class="form-group row">
+                    <label for="example-text-input" class="col-sm-4 col-form-label">Invoice Number</label>
+                    <div class="col-sm-8">
+                      <!-- <input class="form-control" type="text" value="Artisanal kale" id="Invoice-Number"> -->
+                      <input type="text" class="form-control"  id="InvoiceNumber" name="InvoiceNumber" [(ngModel)]="model.InvoiceNumber" #InvoiceNumber="ngModel"  placeholder="Enter Invoice Number" required/>
+                    
+                      
+                          <div *ngIf="InvoiceNumber?.invalid && (InvoiceNumber?.dirty || InvoiceNumber?.touched)" class="alert alert-danger">
+                                Invoice Number is required
+                          </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                        <label for="example-text-input" class="col-sm-4 col-form-label">Bank Referance Number</label>
+                        <div class="col-sm-8">
+                          <!-- <input class="form-control" type="text" value="Artisanal kale" id="Bank-Referance-Number">/ -->
+                          <input type="text" class="form-control"  id="ReferanceNumber" name="ReferanceNumber" [(ngModel)]="model.ReferanceNumber" #ReferanceNumber="ngModel"  placeholder="Enter Referance Number" required/>
+                    
+                      
+                          <div *ngIf="ReferanceNumber?.invalid && (ReferanceNumber?.dirty || ReferanceNumber?.touched)" class="alert alert-danger">
+                                Referance Number is required
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="form-group row">
+                            <label for="example-text-input" class="col-sm-4 col-form-label">Exchange Rate</label>
+                            <div class="col-sm-8">
+                              <!-- <input class="form-control" type="text" value="Artisanal kale" id="Exchange-Rate"> -->
+                              <input type="text" class="form-control"  id="ExchangeRate" name="ExchangeRate" [(ngModel)]="model.ExchangeRate" #ExchangeRate="ngModel"  placeholder="Enter Exchange Rate" required/>
+                    
+                      
+                              <div *ngIf="ExchangeRate?.invalid && (ExchangeRate?.dirty || ExchangeRate?.touched)" class="alert alert-danger">
+                                    Exchange Rate is required
+                              </div>
+                            </div>
+                          </div>
+          <div class="form-group mb-0">
+            <div>
+                    
+                    
+                    
+                    
+              <button type="submit" (click)="addRecord()"  [disabled]=" (AllocatedDate.invalid) || (InvoiceNumber.invalid) || (ReferanceNumber.invalid) || (ExchangeRate.invalid) || (Allocatedamount.invalid)"  class="btn btn-primary">
+                Add Record
+              </button>
+
+            </div>
+          </div>
+        </form>
+        <div class="row">
+            <div class="col">
+                    <ag-grid-angular style="    height: 200px;" [frameworkComponents]="frameworkComponents" class="ag-theme-balham" [rowData]="ContractrowData" [columnDefs]="ContractColumn"
+                        (gridReady)="onGridReady($event)">
+                      </ag-grid-angular>
+                      <div>
+                            <!-- <button type="submit"  style="float: right;" class="btn btn-primary waves-effect waves-light mr-1">
+                              Save
+                            </button> -->
+                
+                          </div>
+            </div>
+          
+          
+        </div>
+
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Add Referance Number
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+      <form #ReferanceForm="ngForm" style="    margin: 2px 170px 20px 100px;">
+            <div class="form-group row">
+              <label for="example-text-input" class="col-sm-4 col-form-label">Referance Number</label>
+              <div class="col-sm-8">
+                <input class="form-control" type="text"  id="refNo" name="refNo" [(ngModel)]="refmodel.refNo" #refNo="ngModel"  id="refNo" placeholder="Enter Referance Number" required/>
+                <div *ngIf="refNo?.invalid && (refNo?.dirty || refNo?.touched)" class="alert alert-danger">
+                  Referance Number is required
+            </div>
+              </div>
+            </div>
+          
+            <div class="form-group mb-0">
+              <div>
+                  <button type="submit" (click)="addref()"  [disabled]="refNo.invalid" style="margin-left: 70%;"  class="btn btn-primary">
+                     Submit
+                    </button>
+                <!-- <button type="submit" (click)="addref()"  [disabled]="refNo" style="margin-left: 70%;" class="btn btn-primary waves-effect waves-light mr-1">
+                 Save
+                </button> -->
+  
+              </div>
+            </div>
+          </form>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <div class="row" style="float: right">
+    <!-- <button class="btn btn-primary btn-md widget-btn" (click)="submit()" type="button"> Submit</button> -->
+    <!-- <button class="btn btn-primary btn-md widget-btn" (click)="Rollover()" type="button"> Roll Over</button> -->
+    <button class="btn btn-primary btn-md widget-btn" (click)="Cancel()" type="button"> Cancel</button>
+  </div>
+</div>

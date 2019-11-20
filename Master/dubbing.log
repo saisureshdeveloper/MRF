@@ -1,0 +1,483 @@
+[ 2019-10-22T06:42:07.403Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T06:43:18.125Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T06:45:09.142Z : [31merror[39m ] : 	uncaughtException: Unexpected token )
+D:\project_structure\MRF\MRFserverSide\Master\web\controllers\user.controller.js:240
+      .catch(error =>{ console.log(error.message));
+                                                 ^
+
+SyntaxError: Unexpected token )
+    at createScript (vm.js:80:10)
+    at Object.runInThisContext (vm.js:139:10)
+    at Module._compile (module.js:599:28)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\web\router\api.js:5:12)
+[ 2019-10-22T06:45:26.683Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T06:46:44.332Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T06:48:37.813Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T06:50:25.111Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T06:51:48.411Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T06:53:31.597Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T06:55:05.885Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T06:56:10.932Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T06:56:51.040Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T06:57:57.112Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T06:59:16.618Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T06:59:59.896Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:01:37.989Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:04:02.219Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:04:53.349Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:07:12.874Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:08:13.174Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:08:45.957Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:09:52.876Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:11:06.482Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:14:03.041Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:20:58.086Z : [31merror[39m ] : 	SyntaxError: Unexpected string in JSON at position 64
+    at JSON.parse (<anonymous>)
+    at parse (D:\project_structure\MRF\MRFserverSide\Master\node_modules\body-parser\lib\types\json.js:89:19)
+    at D:\project_structure\MRF\MRFserverSide\Master\node_modules\body-parser\lib\read.js:121:18
+    at invokeCallback (D:\project_structure\MRF\MRFserverSide\Master\node_modules\raw-body\index.js:224:16)
+    at done (D:\project_structure\MRF\MRFserverSide\Master\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (D:\project_structure\MRF\MRFserverSide\Master\node_modules\raw-body\index.js:273:7)
+    at emitNone (events.js:106:13)
+    at IncomingMessage.emit (events.js:208:7)
+    at endReadableNT (_stream_readable.js:1056:12)
+    at _combinedTickCallback (internal/process/next_tick.js:138:11)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+[ 2019-10-22T07:35:31.315Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:35:40.753Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T07:35:52.344Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T07:36:56.805Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:37:11.099Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T07:40:11.707Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:40:41.173Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:40:52.319Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T07:43:04.983Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T07:43:06.888Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:43:19.122Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T07:43:32.577Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T07:45:32.582Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T07:46:17.773Z : [31merror[39m ] : 	uncaughtException: Cannot find module 'bcryptjs'
+Error: Cannot find module 'bcryptjs'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\web\controllers\user.controller.js:15:16)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\web\router\api.js:5:12)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\server.js:22:13)
+    at Module._compile (module.js:635:30)
+[ 2019-10-22T07:46:54.910Z : [31merror[39m ] : 	uncaughtException: Cannot find module 'bcryptjs'
+Error: Cannot find module 'bcryptjs'
+    at Function.Module._resolveFilename (module.js:536:15)
+    at Function.Module._load (module.js:466:25)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\web\controllers\user.controller.js:15:16)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\web\router\api.js:5:12)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\server.js:22:13)
+    at Module._compile (module.js:635:30)
+[ 2019-10-22T07:51:09.296Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:51:29.275Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:51:36.795Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T07:53:35.893Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:53:48.710Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T07:54:34.990Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T07:54:45.527Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T07:54:48.249Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T07:54:56.329Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T07:55:14.762Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T07:59:40.730Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T08:02:39.282Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T08:03:11.589Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T08:03:26.832Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T08:03:29.682Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T08:04:01.116Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T08:04:04.044Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T08:04:21.843Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T08:04:24.690Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T08:05:11.624Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T08:05:28.604Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T08:05:31.555Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T08:05:55.827Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T08:06:07.455Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T08:06:10.729Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T08:06:31.946Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T08:06:39.159Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T08:07:25.075Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T08:07:25.135Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T08:07:35.744Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T08:09:57.411Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T08:10:09.573Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T08:10:35.133Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T08:11:45.178Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T08:12:00.481Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T08:12:32.329Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T08:13:43.559Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T09:57:36.183Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T09:58:10.488Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T09:58:40.838Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T10:00:34.836Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T10:01:41.972Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T10:01:55.352Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T10:02:07.682Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T10:06:57.477Z : [31merror[39m ] : 	uncaughtException: Cannot read property 'headers' of undefined
+TypeError: Cannot read property 'headers' of undefined
+    at Object.ensureToken (D:\project_structure\MRF\MRFserverSide\common_lib\utils\tokenHelper.js:30:34)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\web\router\api.js:83:28)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\server.js:22:13)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+[ 2019-10-22T10:07:25.866Z : [31merror[39m ] : 	uncaughtException: req is not defined
+ReferenceError: req is not defined
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\web\router\api.js:83:40)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\server.js:22:13)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+[ 2019-10-22T10:14:16.873Z : [31merror[39m ] : 	uncaughtException: req is not defined
+ReferenceError: req is not defined
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\web\router\api.js:83:40)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\server.js:22:13)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+[ 2019-10-22T10:14:31.407Z : [31merror[39m ] : 	uncaughtException: req is not defined
+ReferenceError: req is not defined
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\web\router\api.js:80:1)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\server.js:22:13)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+[ 2019-10-22T10:16:15.211Z : [31merror[39m ] : 	uncaughtException: req is not defined
+ReferenceError: req is not defined
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\web\router\api.js:80:30)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\server.js:22:13)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+[ 2019-10-22T10:16:24.223Z : [31merror[39m ] : 	uncaughtException: req is not defined
+ReferenceError: req is not defined
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\web\router\api.js:80:30)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\server.js:22:13)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+[ 2019-10-22T10:18:01.072Z : [31merror[39m ] : 	uncaughtException: req is not defined
+ReferenceError: req is not defined
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\web\router\api.js:80:30)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\server.js:22:13)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+[ 2019-10-22T10:18:55.831Z : [31merror[39m ] : 	uncaughtException: req is not defined
+ReferenceError: req is not defined
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\web\router\api.js:80:30)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Module.require (module.js:579:17)
+    at require (internal/module.js:11:18)
+    at Object.<anonymous> (D:\project_structure\MRF\MRFserverSide\Master\server.js:22:13)
+    at Module._compile (module.js:635:30)
+    at Object.Module._extensions..js (module.js:646:10)
+    at Module.load (module.js:554:32)
+    at tryModuleLoad (module.js:497:12)
+    at Function.Module._load (module.js:489:3)
+    at Function.Module.runMain (module.js:676:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:608:3
+[ 2019-10-22T10:19:08.757Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T10:19:14.579Z : [32minfo[39m ] : 	site list value index  Router
+[ 2019-10-22T10:42:21.826Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T10:57:20.302Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T10:58:23.216Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-22T10:58:37.209Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T11:55:08.843Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T11:56:26.045Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T11:56:34.561Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-22T11:56:38.866Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-23T04:53:48.263Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-23T05:06:33.654Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-23T05:06:45.846Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-23T07:03:22.472Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-23T10:18:40.729Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T04:53:39.547Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-30T05:25:21.656Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T05:25:30.853Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T05:49:14.687Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T07:39:14.171Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-30T08:04:26.424Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T08:08:07.356Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-30T10:01:57.129Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T10:02:06.421Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T10:05:35.306Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T11:12:58.644Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-30T11:13:32.528Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T12:19:06.990Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T12:47:45.138Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T12:49:27.991Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T12:57:32.556Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T13:02:06.473Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T13:02:16.065Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T13:06:14.028Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T13:10:02.372Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T13:12:29.055Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T13:12:59.760Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T13:13:16.911Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T13:17:34.336Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-30T13:18:49.914Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-31T04:38:18.876Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-31T05:41:24.020Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-31T06:30:28.021Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-31T06:31:04.550Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-31T07:34:20.453Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-31T08:48:12.047Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-31T08:55:21.646Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-31T10:03:22.133Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-31T11:07:30.951Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-31T12:07:59.578Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-31T13:11:51.636Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-10-31T13:12:57.948Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-31T13:13:18.309Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-31T13:13:46.136Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-31T13:17:19.887Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-10-31T16:04:03.837Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-01T04:32:35.452Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-01T06:15:57.630Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-01T06:16:08.329Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-01T06:16:35.316Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-01T06:17:00.793Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-01T09:21:23.000Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-01T10:21:50.236Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-01T11:21:17.165Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-01T12:33:05.980Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-01T16:37:13.949Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-01T17:09:07.876Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-02T04:55:14.143Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-11-02T05:11:24.841Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-02T06:12:33.385Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-02T07:14:59.364Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-02T08:41:49.274Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-02T08:49:16.505Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-02T09:53:55.915Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-02T11:01:54.838Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-02T18:04:43.775Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-02T18:04:53.900Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-02T18:37:49.795Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-02T19:11:44.970Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-03T06:13:32.969Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-11-03T06:36:42.151Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-03T06:36:53.739Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-03T07:38:54.446Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-03T07:39:30.440Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-03T17:31:26.068Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-03T18:48:13.870Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T04:49:47.928Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T06:04:49.796Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T07:05:55.978Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T07:43:54.700Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T07:47:54.712Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T08:02:50.242Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T08:03:02.172Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T08:36:13.218Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T08:51:44.175Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T08:52:18.250Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T08:59:27.015Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T09:01:29.236Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T10:30:24.751Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T11:32:58.558Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T11:33:26.647Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-04T12:34:13.247Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-05T04:42:17.570Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-11-05T04:45:11.708Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-05T08:32:32.167Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-05T09:33:10.397Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-05T10:15:03.304Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-05T11:16:46.349Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-05T13:09:33.151Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-05T13:09:56.911Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-05T13:10:35.175Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T04:59:31.506Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T04:59:46.192Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T05:09:20.518Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T05:25:56.747Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T05:27:58.094Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-11-06T05:29:32.918Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T05:34:02.362Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T05:47:11.571Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T05:47:24.744Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T05:47:40.082Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T05:47:40.496Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T05:54:13.653Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T05:54:25.948Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T05:58:42.319Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T07:23:29.098Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-06T09:47:30.129Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-07T07:05:39.092Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-07T07:06:43.458Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-07T09:03:38.831Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-07T10:09:31.065Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-07T12:32:27.514Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-07T13:39:20.707Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-07T15:44:40.761Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-07T15:47:08.559Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-11-07T17:02:19.285Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-07T17:18:42.506Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-11-08T02:36:08.010Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-08T02:53:13.894Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-11-08T07:28:59.389Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-11-09T05:21:04.457Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-10T18:33:42.791Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-11-10T18:37:13.653Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-11T02:04:20.727Z : [32minfo[39m ] : 	MASTER is running on port 3000
+[ 2019-11-11T02:05:16.497Z : [32minfo[39m ] : 	MASTER is running on port  [object Object] 3000
+[ 2019-11-11T02:09:26.743Z : [32minfo[39m ] : 	MASTER is running on port  192.168.0.10 3000
+[ 2019-11-11T02:10:26.288Z : [32minfo[39m ] : 	MASTER is running on port  http://192.168.0.10:3000
+[ 2019-11-11T02:10:55.575Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-11T02:25:51.561Z : [32minfo[39m ] : 	MASTER is running on port  http://192.168.0.10:3000
+[ 2019-11-11T02:42:21.259Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-11T03:06:01.365Z : [32minfo[39m ] : 	MASTER is running on port  http://192.168.0.10:3000
+[ 2019-11-11T03:06:46.748Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-11T04:24:31.323Z : [32minfo[39m ] : 	MASTER is running on port  http://192.168.0.10:3000
+[ 2019-11-12T05:03:17.581Z : [32minfo[39m ] : 	MASTER is running on port  http://192.168.0.10:3000
+[ 2019-11-12T06:18:51.732Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-13T04:17:04.124Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-13T12:46:16.463Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-14T06:00:08.928Z : [32minfo[39m ] : 	MASTER is running on port  http://192.168.0.7:3000
+[ 2019-11-14T11:37:07.383Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-14T11:37:52.997Z : [32minfo[39m ] : 	MASTER is running on port  http://192.168.0.7:3000
+[ 2019-11-15T06:42:54.575Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-15T06:49:12.603Z : [32minfo[39m ] : 	MASTER is running on port  http://192.168.1.5:3000
+[ 2019-11-15T06:49:43.544Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-15T06:56:46.470Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-15T07:02:49.057Z : [32minfo[39m ] : 	MASTER is running on port  http://192.168.1.5:3000
+[ 2019-11-15T07:03:23.039Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-15T07:03:33.388Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-16T05:31:39.337Z : [32minfo[39m ] : 	MASTER is running on port  http://192.168.100.42:3000
+[ 2019-11-16T05:32:46.883Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-16T11:33:34.207Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-16T11:35:16.031Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-16T11:37:42.084Z : [32minfo[39m ] : 	user signin  Router
+[ 2019-11-19T04:36:27.636Z : [32minfo[39m ] : 	MASTER is running on port  http://192.168.0.124:3000
+[ 2019-11-19T04:37:33.999Z : [32minfo[39m ] : 	user signin  Router
